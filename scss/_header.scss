@@ -1,0 +1,14 @@
+.header{
+    text-align: center;
+    padding: 60px 10px 30px ;
+    font-size: 14px;
+    
+    &__title{
+        color: var(--veryDarkMagenta);
+        font-weight: 700;
+    }
+    &__paragraph{
+        color:var(--darkGrayishMagenta);
+        font-weight: 500;
+    }
+}

@@ -7,7 +7,23 @@
   --white: hsl(0, 0%, 100%);
 }
 
-html {
+body {
   font-family: "Spartan", sans-serif;
+}
+
+.header {
+  text-align: center;
+  padding: 60px 10px 30px;
+  font-size: 14px;
+}
+
+.header__title {
+  color: var(--veryDarkMagenta);
+  font-weight: 700;
+}
+
+.header__paragraph {
+  color: var(--darkGrayishMagenta);
+  font-weight: 500;
 }
 /*# sourceMappingURL=style.css.map */
