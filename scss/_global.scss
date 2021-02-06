@@ -14,3 +14,34 @@ body {
   font-family: "Spartan", sans-serif;
 }
 
+.rates {
+  text-align: center;
+}
+.rated {
+  background-color: var(--lightGrayishMagenta);
+  margin: 1rem 0.625rem;
+  padding: 10px 50px;
+  border-radius: 7.5px;
+  color: var(--veryDarkMagenta);
+  font-size: 12px;
+  font-weight: 700;
+  &__star {
+    
+    background-color: orange;
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    clip-path: polygon(
+      50% 0%,
+      61% 35%,
+      98% 35%,
+      68% 57%,
+      79% 91%,
+      50% 70%,
+      21% 91%,
+      32% 57%,
+      2% 35%,
+      39% 35%
+    );
+  }
+}

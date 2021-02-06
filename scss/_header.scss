@@ -1,14 +1,19 @@
 .header{
     text-align: center;
-    padding: 60px 10px 30px ;
-    font-size: 14px;
+    padding: 50px 10px 10px ;
+    
     
     &__title{
         color: var(--veryDarkMagenta);
         font-weight: 700;
+        line-height: 2rem;
+        padding-bottom: 5px;
+        
     }
     &__paragraph{
         color:var(--darkGrayishMagenta);
         font-weight: 500;
+        font-size: 15px;
+        line-height: 1.5rem;
     }
 }
