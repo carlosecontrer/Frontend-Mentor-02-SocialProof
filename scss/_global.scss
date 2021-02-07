@@ -23,13 +23,13 @@ body {
   background-color: var(--lightGrayishMagenta);
   margin: 1rem 0.625rem;
   padding: 10px 50px;
-  border-radius: 7.5px;
+  border-radius: 10px;
   color: var(--veryDarkMagenta);
   font-size: 12px;
   font-weight: 700;
   &__star {
     
-    background-color: #EF9546//orange;
+    background-color: #EF9546;//orange;
     width: 1rem;
     height: 1rem;
     display: inline-block;
@@ -46,4 +46,22 @@ body {
       39% 35%
     );
   }
+}
+
+.testimonial{
+    background-color: var(--veryDarkMagenta);
+    border-radius: 10px;
+    padding: 0 10px;
+    margin: 10px;
+    &__header{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.testimonial__img{
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
