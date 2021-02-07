@@ -12,6 +12,8 @@
 
 body {
   font-family: "Spartan", sans-serif;
+ margin: 0;
+  padding: 0;
 }
 
 .rates {
@@ -27,7 +29,7 @@ body {
   font-weight: 700;
   &__star {
     
-    background-color: orange;
+    background-color: #EF9546//orange;
     width: 1rem;
     height: 1rem;
     display: inline-block;
