@@ -12,7 +12,7 @@
 
 body {
   font-family: "Spartan", sans-serif;
- margin: 0;
+  margin: 0;
   padding: 0;
 }
 
@@ -21,15 +21,14 @@ body {
 }
 .rated {
   background-color: var(--lightGrayishMagenta);
-  margin: 1rem 0.625rem;
+  margin: 1rem 20px;//0.625rem;
   padding: 10px 50px;
   border-radius: 10px;
   color: var(--veryDarkMagenta);
   font-size: 12px;
   font-weight: 700;
   &__star {
-    
-    background-color: #EF9546;//orange;
+    background-color: #ef9546; //orange;
     width: 1rem;
     height: 1rem;
     display: inline-block;
@@ -48,20 +47,67 @@ body {
   }
 }
 
-.testimonial{
-    background-color: var(--veryDarkMagenta);
-    border-radius: 10px;
-    padding: 0 10px;
-    margin: 10px;
-    &__header{
-        display: flex;
-        flex-wrap: wrap;
-    }
-}
-
-.testimonial__img{
+.testimonial {
+  background-color: var(--veryDarkMagenta);
+  height: 240px;
+  border-radius: 10px;
+  //padding: 10px 10px;
+  margin: 20px;
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin:35px 35px 15px 35px;
+    margin-top: 20px;
+  }
+  &__img {
     display: block;
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    margin-top: 20px;
+  }
+  &__autor {
+    //background-color: orange;
+    margin-top: 20px;
+  }
+  &__title, &__subtitle{
+    //background-color: orangered;
+    margin: 0 0 0 20px;
+  }
+  &__title{
+    color: var(--white);
+    font-size: .8rem;
+  }
+  &__subtitle{
+    color: var(--softPink);
+    font-size: .8rem;
+    font-weight: 400;
+  }
+  &__description{
+    color: var(--white);
+    margin: 20 35px;
+    font-size: .8rem;
+    font-weight: 500;
+    font-weight: 400;
+    line-height: 1.5rem;
+  }
+}
+
+html::before{
+  display: block;
+  position: fixed;
+  content: url(../images/bg-pattern-top-mobile.svg);
+  top: 0px;
+  left: 0px;
+  //position: fixed;
+}
+
+html::after{
+  display: block;
+  position: fixed;
+  //background-color: red;
+  content: url(../images/bg-pattern-bottom-mobile.svg);
+  bottom: 0px;
+  right: 0px;
 }
