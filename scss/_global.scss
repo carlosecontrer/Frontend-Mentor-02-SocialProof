@@ -16,98 +16,74 @@ body {
   padding: 0;
 }
 
-.rates {
-  text-align: center;
-}
-.rated {
-  background-color: var(--lightGrayishMagenta);
-  margin: 1rem 20px;//0.625rem;
-  padding: 10px 50px;
-  border-radius: 10px;
-  color: var(--veryDarkMagenta);
-  font-size: 12px;
-  font-weight: 700;
-  &__star {
-    background-color: #ef9546; //orange;
-    width: 1rem;
-    height: 1rem;
-    display: inline-block;
-    clip-path: polygon(
-      50% 0%,
-      61% 35%,
-      98% 35%,
-      68% 57%,
-      79% 91%,
-      50% 70%,
-      21% 91%,
-      32% 57%,
-      2% 35%,
-      39% 35%
-    );
+html {
+  &::before,
+  &::after {
+    position: fixed;
+    z-index: -1;
   }
-}
-
-.testimonial {
-  background-color: var(--veryDarkMagenta);
-  height: 240px;
-  border-radius: 10px;
-  //padding: 10px 10px;
-  margin: 20px;
-  &__header {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin:35px 35px 15px 35px;
-    margin-top: 20px;
-  }
-  &__img {
+  &::before {
     display: block;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-top: 20px;
+
+    content: url(../images/bg-pattern-top-mobile.svg);
+    top: 0px;
+    left: 0px;
+    //position: fixed;
   }
-  &__autor {
-    //background-color: orange;
-    margin-top: 20px;
-  }
-  &__title, &__subtitle{
-    //background-color: orangered;
-    margin: 0 0 0 20px;
-  }
-  &__title{
-    color: var(--white);
-    font-size: .8rem;
-  }
-  &__subtitle{
-    color: var(--softPink);
-    font-size: .8rem;
-    font-weight: 400;
-  }
-  &__description{
-    color: var(--white);
-    margin: 20 35px;
-    font-size: .8rem;
-    font-weight: 500;
-    font-weight: 400;
-    line-height: 1.5rem;
+  &::after {
+    display: block;
+
+    //background-color: red;
+    content: url(../images/bg-pattern-bottom-mobile.svg);
+    bottom: 0px;
+    right: 0px;
+    //width: 100%;
   }
 }
 
-html::before{
-  display: block;
+.attribution {
+  display: flex;
+  flex-basis: 100%;
+  width: 100%;
   position: fixed;
-  content: url(../images/bg-pattern-top-mobile.svg);
-  top: 0px;
-  left: 0px;
-  //position: fixed;
-}
-
-html::after{
-  display: block;
-  position: fixed;
-  //background-color: red;
-  content: url(../images/bg-pattern-bottom-mobile.svg);
   bottom: 0px;
-  right: 0px;
+  left: 0px;
+  padding: 0.8rem;
+  background-color: var(--lightGrayishMagenta);
+  justify-content: center;
+  align-items: center;
+  font-size: 0.6rem;
+}
+
+//Break Points tablet medium
+@media screen and(min-width:768px) {
+  html {
+    &::before {
+      content: url(../images/bg-pattern-top-desktop.svg);
+    }
+    &::after {
+      content: url(../images/bg-pattern-bottom-desktop.svg);
+    }
+  }
+
+  .attribution {
+    // position: absolute;
+    // bottom: 0;
+    // left: 0;
+    // right: 0;
+    // margin: auto;
+    font-size: 0.6rem;
+  }
+}
+
+@media screen and(min-width:1080px) {
+  body {
+    max-width: 1080px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .attribution{
+    font-size: .8rem;
+  }
 }

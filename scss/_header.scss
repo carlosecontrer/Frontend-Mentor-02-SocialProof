@@ -17,3 +17,21 @@
         line-height: 1.5rem;
     }
 }
+
+@media screen and (min-width:768px){
+    .header{
+        width: 500px;
+        &__title{
+            font-size: 3rem;
+            line-height: 3rem;
+            text-align: left;
+        }
+        &__paragraph{
+            font-size: 1rem;
+            text-align: left;
+        }
+
+    }
+    
+    
+}
