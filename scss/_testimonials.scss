@@ -2,6 +2,7 @@
   background-color: var(--veryDarkMagenta);
   height: 240px;
   border-radius: 10px;
+  
   //padding: 10px 10px;
   margin: 20px;
   &__header {
@@ -50,5 +51,38 @@
   .testimonial {
     width: 350px;
     height: 230px;
+    
+  }
+
+  .testimonials{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+
+
+@media screen and(min-width:1080px){
+  .testimonials{
+padding: 0;
+    grid-row: 2;
+    grid-column: 1/4;
+    flex-wrap: nowrap;
+    align-items: center;
+    position:relative;
+    
+  }
+  .testimonial{
+    margin: 0;
+    &:first-child{
+      position: absolute;
+      left: 0;
+      top: 4.5rem;
+    }
+    &:last-child{
+      position: absolute;
+      right: 0;
+      bottom: 4.5rem;
+    }
   }
 }

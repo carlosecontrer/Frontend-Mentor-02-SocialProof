@@ -1,6 +1,7 @@
 .header{
     text-align: center;
     padding: 60px 20px 20px ;
+    margin: auto;
     
     
     &__title{
@@ -24,14 +25,22 @@
         &__title{
             font-size: 3rem;
             line-height: 3rem;
-            text-align: left;
+            
         }
         &__paragraph{
             font-size: 1rem;
-            text-align: left;
+           
         }
 
     }
     
     
+}
+
+@media screen and(min-width:1080px){
+    .header{
+        &__title, &__paragraph{
+            text-align: left;
+        }
+    }
 }

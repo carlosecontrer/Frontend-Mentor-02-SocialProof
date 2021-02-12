@@ -73,15 +73,18 @@ html::after {
     display: grid;
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: (400px)[2];
+        grid-template-rows: repeat(2, 400px);
   }
   .attribution {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 }
 
 .header {
   text-align: center;
   padding: 60px 20px 20px;
+  margin: auto;
 }
 
 .header__title {
@@ -105,10 +108,14 @@ html::after {
   .header__title {
     font-size: 3rem;
     line-height: 3rem;
-    text-align: left;
   }
   .header__paragraph {
     font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .header__title, .header__paragraph {
     text-align: left;
   }
 }
@@ -134,6 +141,40 @@ html::after {
   display: inline-block;
   -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
           clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+@media screen and (min-width: 1080px) {
+  .rates {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-column: 2/4;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0px;
+  }
+  .rated {
+    margin: 0px;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  .rated:first-child {
+    left: -1rem;
+    margin-top: 1.5rem;
+  }
+  .rated:last-child {
+    right: -1rem;
+    margin-bottom: 0;
+  }
 }
 
 .testimonial {
@@ -196,6 +237,46 @@ html::after {
   .testimonial {
     width: 350px;
     height: 230px;
+  }
+  .testimonials {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .testimonials {
+    padding: 0;
+    -ms-grid-row: 2;
+    grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+  }
+  .testimonial {
+    margin: 0;
+  }
+  .testimonial:first-child {
+    position: absolute;
+    left: 0;
+    top: 4.5rem;
+  }
+  .testimonial:last-child {
+    position: absolute;
+    right: 0;
+    bottom: 4.5rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

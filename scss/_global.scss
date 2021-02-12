@@ -82,8 +82,9 @@ html {
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 400px);
   }
-  .attribution{
-    font-size: .8rem;
+  .attribution {
+    font-size: 0.8rem;
   }
 }

@@ -29,3 +29,29 @@
     }
   }
   
+
+  @media screen and(min-width:1080px){
+    .rates{
+      grid-row: 1;
+      grid-column: 2/4;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0px;
+      
+    }
+    
+    .rated{
+      margin: 0px;
+      margin-bottom: 1rem;
+      position: relative;
+      &:first-child{
+        left: -1rem;
+        margin-top: 1.5rem;
+      }
+      &:last-child{
+        right: -1rem;
+        margin-bottom: 0;
+      }
+    }
+  }
